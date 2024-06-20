@@ -42,8 +42,6 @@ app.use(express.json({ limit: '50mb' }));
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/anotherDir', express.static(path.join(__dirname, 'public')));
-// this makes the public folder also available to another directory other than the server.js
 app.use('/product_imgs', express.static(path.join(__dirname, 'db', 'product_images'), 
 {
   setHeaders: function (res, path, stat) {
