@@ -59,7 +59,8 @@ const addNewImages = async (req, res) => {
 
 const deleteImagePaths = async (req, res) => {
   const { id } = req.params
-  const { deletedImgIndexes } = req.body;
+  const deletedImgIndexes = req.body;
+
   if (!deletedImgIndexes || deletedImgIndexes.length === 0) return res.sendStatus(400)
 
   try {
